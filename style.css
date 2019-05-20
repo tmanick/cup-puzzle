@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	background: url(images/wall.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	width: 80%;
+	margin: 0 10%;
+	height: 90%;
+}
+
+.cup-container {
+	float: left;
+	width: 25%;
+	padding: 20px;
+	position: relative;
+	height: 100%;
+}
+
+.cup,
+.cup-compare {
+	width: 90%;
+	border: 6px solid rgba(94, 90, 90, 1);
+	border-top: none;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	bottom: 0px;
+	left: 5%;
+	overflow: hidden;
+	transition: all .25s ease-in-out;
+	background: rgba(94, 90, 90, .6);
+}
+.cup.chosen-cup {
+	transform: translateY(-10px);
+}
+
+.liquid {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	transition: all 1s ease-in-out;
+	background: rgba(127, 86, 6, .8);
+}
+
+.piece {
+	width: 100%;
+	height: 30px;
+	position: relative;
+}
+.piece:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 6px;
+	background: rgba(94, 90, 90, 1);
+}
+
+.cup-compare {
+	border: 8px solid #5d4311;
+	border-bottom: none;
+	border-radius: 20px 20px 0 0;
+	background-color: #5d4311;
+}
+.cup-compare .liquid {
+	background-color: #5d4311;
+}
+.cup-compare .piece:before {
+	content: none;
+}
+
+.table {
+	height: auto !important;
+	width: 100%;
+	position: absolute;
+	top: 90%;
+	left: 0;
+}
+
+#success {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .5);
+	color: #a41515;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:100px;
+	display: none;
+}
